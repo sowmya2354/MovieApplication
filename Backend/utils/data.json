@@ -1,0 +1,27 @@
+[
+  {
+    "Title": "RRR",
+    "Description": "RRR (subtitled onscreen as Roudram Ranam Rudhiram) is a 2022 Indian Telugu-language epic period action drama film directed by S. S. Rajamouli, who co-wrote the film with V. Vijayendra Prasad. It was produced by D. V. V. Danayya of DVV Entertainment",
+    "ReleaseYear": "2022",
+    "Genre": "action",
+    "image": null,
+    "id": "70996df0-e9ca-4d68-9528-056c50374aec",
+    "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg"
+  },
+  {
+    "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg",
+    "id": "050bb6df-248e-4cd4-bd7c-357a8e4bf134",
+    "Title": "Pulp Fiction",
+    "Description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "Genre": "Crime, Drama",
+    "ReleaseYear": "2023"
+  },
+  {
+    "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg",
+    "id": "2b97da2b-54d0-4ae4-9ddb-0d685965e5ff",
+    "Title": "Forrest Gump",
+    "Description": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.",
+    "Genre": "Drama, Romance",
+    "ReleaseYear": "2023"
+  }
+]

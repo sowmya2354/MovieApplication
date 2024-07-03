@@ -1,0 +1,38 @@
+/* styles.css */
+
+/* Container for the grid */
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust as per your layout needs */
+}
+
+/* Individual card style */
+.cardStyle {
+  width: 300px; /* Adjust width as needed */
+  margin-bottom: 20px; /* Margin between cards */
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  padding: 8px;
+  color: white;
+}
+
+.overlayText {
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+.cardContentStyle {
+  padding: 16px;
+}
+
+.add_movie_wrapper{
+  display: flex;
+  justify-content: flex-end;
+  margin:20px
+}
+
+.mb_10{
+  margin-bottom:10px!important ;
+}
