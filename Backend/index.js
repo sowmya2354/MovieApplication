@@ -51,7 +51,7 @@ app.post("/data", (req, res) => {
     const movies = readData();
     const newMovie = req.body;
 
-    if (!newMovie.Title || !newMovie.Description) {
+    if (!newMovie.title || !newMovie.description) {
       return res
         .status(400)
         .json({ error: "Missing required fields (Title and Description)" });
@@ -99,7 +99,7 @@ app.put("/data/:id", (req, res) => {
     if (movieIndex === -1) {
       return res.status(404).json({ error: "Movie not found" });
     }
-    if (!updatedMovie.Title || !updatedMovie.Description) {
+    if (!updatedMovie.title || !updatedMovie.description) {
       return res
         .status(400)
         .json({ error: "Missing required fields (Title and Description)" });

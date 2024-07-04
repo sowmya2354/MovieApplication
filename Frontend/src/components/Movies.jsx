@@ -1,17 +1,11 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 
-import { deleteMovie, getMovies } from "../redux/movieSlice";
+import { deleteMovie, getMovies, putMovie } from "../redux/movieSlice";
 import "../styles.css";
 import AddMovieComponent from "./AddMovie";
+import MovieCard from "./MovieCard";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -30,54 +24,70 @@ const Home = () => {
     setEditMovie({ id: e.target.id, edit: true });
   };
 
+  const handleWatched = (e) => {
+    const watchedMovies = movies.filter((item) => item.id === e.target.id);
+    dispatch(putMovie({ ...watchedMovies[0], watched: true }, e.target.id));
+  };
+  const handleRating=(e)=>{
+    const watchedMovies = movies.filter((item) => item.id === e.target.name);
+    console.log(e);
+    dispatch(putMovie({ ...watchedMovies[0], rating:e.target.value }, e.target.name));
+  }
+
   return (
     <div>
       <div className="add_movie_wrapper">
         <AddMovieComponent editMovie={editMovie} setEditMovie={setEditMovie} />
       </div>
+      <h1>Unwatched Movies</h1>
       <Grid container spacing={2}>
         {movies?.map((movie) => (
-          <Grid item xs={12} sm={6} md={4} key={movie.id}>
-            <Card style={{ width: "100%", height: "100%" }}>
-              <Box>
-                <Box className="overlay">
-                  <Typography
-                    variant="h5"
-                    component="div"
-                    className="overlayText"
-                  >
-                    {movie.Title}
-                  </Typography>
-                </Box>
-              </Box>
-              <CardContent className="cardContentStyle">
-                <Typography variant="h7" color="text.primary">
-                  Release Year: {movie.ReleaseYear}
-                </Typography>
-                <Typography variant="body2" color="text.primary">
-                  Description: {movie.Description}
-                </Typography>
-                <Typography variant="body2" color="text.primary">
-                  Genre: {movie.Genre}
-                </Typography>
-                <Button
-                  variant="contained"
-                  onClick={(e) => handleDelete(e)}
-                  id={movie.id}
-                  style={{marginRight:'10px'}}
-                >
-                  Delete
-                </Button>
-                <Button
-                  variant="contained"
-                  onClick={(e) => handleEdit(e)}
-                  id={movie.id}
-                >
-                  Edit
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid>
+          <>
+            {!movie.hasOwnProperty("watched") && !movie.watched && (
+              <>
+                <Grid item xs={12} sm={6} md={4} key={movie.id}>
+                  <MovieCard
+                    id={movie.id}
+                    title={movie.title}
+                    description={movie.description}
+                    year={movie.year}
+                    genre={movie.genre}
+                    watched={false}
+                    handleEdit={(e) => handleEdit(e)}
+                    handleDelete={(e) => handleDelete(e)}
+                    handleWatched={(e) => handleWatched(e)}
+                  />
+                </Grid>
+              </>
+            )}
+          </>
+        ))}
+      </Grid>
+
+      <h1>Watched Movies</h1>
+      <Grid container spacing={2}>
+        {movies?.map((movie) => (
+          <>
+            {movie.hasOwnProperty("watched") && movie.watched && (
+              <>
+                <Grid item xs={12} sm={6} md={4} key={movie.id}>
+                  <MovieCard
+                    id={movie.id}
+                    title={movie.title}
+                    description={movie.description}
+                    year={movie.year}
+                    genre={movie.genre}
+                    watched={true}
+                    rating ={movie.rating}
+                    handleEdit={(e) => handleEdit(e)}
+                    handleDelete={(e) => handleDelete(e)}
+                    handleWatched={(e) => handleWatched(e)}
+                    handleRating={(e)=>handleRating(e)}
+                  />
+                </Grid>
+              </>
+            )}
+          </>
         ))}
       </Grid>
     </div>

@@ -10,16 +10,17 @@ const DialogBox = ({ open, setOpen, editMovie, setEditMovie }) => {
     const { edit, ...rest } = editMovie;
     const getMovie = movies?.filter((item) => item.id === editMovie.id)?.[0]
     const [formData, setFormData] = useState({});
+    console.log(formData)
 
     useEffect(() => {
         if (editMovie.edit) {
             setFormData(getMovie);
         } else {
             setFormData({
-                Title: '',
-                Description: '',
-                ReleaseYear: '',
-                Genre: '',
+                title: '',
+                description: '',
+                year: '',
+                genre: '',
             })
         }
     }, [editMovie.edit]);
@@ -39,7 +40,7 @@ const DialogBox = ({ open, setOpen, editMovie, setEditMovie }) => {
             dispatch(putMovie(formData, editMovie.id));
         } else {
             dispatch(addMovie(formData));
-            setFormData({ Title: '', Description: '', ReleaseYear: '', Genre: '' }); // Clear form data
+            setFormData({ title: '', description: '',year: '', genre: '' }); // Clear form data
         }
         handleClose();
     };
@@ -53,27 +54,27 @@ const DialogBox = ({ open, setOpen, editMovie, setEditMovie }) => {
                     margin="dense"
                     label="Title"
                     fullWidth
-                    value={formData?.Title || ''}
+                    value={formData?.title || ''}
                     onChange={handleChange}
-                    name="Title"
+                    name="title"
                 />
                 <TextField
                     margin="dense"
                     label="Description"
                     fullWidth
-                    value={formData?.Description || ''}
+                    value={formData?.description || ''}
                     onChange={handleChange}
-                    name="Description"
+                    name="description"
                 />
                 <TextField
                     margin="dense"
                     label="Release Year"
                     fullWidth
-                    value={formData?.ReleaseYear || ''}
+                    value={formData?.year || ''}
                     onChange={handleChange}
-                    name="ReleaseYear"
+                    name="year"
                 />
-                <TextField margin="dense" label="Genre" fullWidth value={formData?.Genre || ''} onChange={handleChange} name="Genre" />
+                <TextField margin="dense" label="Genre" fullWidth value={formData?.genre || ''} onChange={handleChange} name="genre" />
             </DialogContent>
             <DialogActions>
                 <Button onClick={handleClose} color="secondary">

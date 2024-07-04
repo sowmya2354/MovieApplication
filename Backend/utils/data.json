@@ -1,27 +1,74 @@
 [
   {
-    "Title": "RRR",
-    "Description": "RRR (subtitled onscreen as Roudram Ranam Rudhiram) is a 2022 Indian Telugu-language epic period action drama film directed by S. S. Rajamouli, who co-wrote the film with V. Vijayendra Prasad. It was produced by D. V. V. Danayya of DVV Entertainment",
-    "ReleaseYear": "2022",
-    "Genre": "action",
-    "image": null,
-    "id": "70996df0-e9ca-4d68-9528-056c50374aec",
+    "id": "fc1066cc-64b6-4d2d-84e1-be8f10c81314",
+    "title": "The Shawshank Redemption",
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption in their friendship.",
+    "year": "1996",
+    "genre": "Drama, Crime",
+    "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg",
+    "watched": true,
+    "rating": "5"
+  },
+  {
+    "id": "19b85436-67a7-4ad5-824d-c142d7e25047",
+    "title": "The Godfather",
+    "description": "The story of the Corleone family under patriarch Vito Corleone, focusing on the transformation of his youngest son, Michael, from reluctant family outsider to ruthless mafia boss.",
+    "year": 1972,
+    "genre": "Crime, Drama",
+    "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg",
+    "watched": true,
+    "rating": "5"
+  },
+  {
+    "id": "6662312b-8327-453f-9170-b9822d7293e2",
+    "title": "The Dark Knight",
+    "description": "When the mentally challenged criminal mastermind Joker emerges from Gotham's underworld, he forces Batman to confront everything he believes in and fight for the soul of Gotham.",
+    "year": 2008,
+    "genre": "Action, Thriller",
     "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg"
   },
   {
-    "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg",
-    "id": "050bb6df-248e-4cd4-bd7c-357a8e4bf134",
-    "Title": "Pulp Fiction",
-    "Description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-    "Genre": "Crime, Drama",
-    "ReleaseYear": "2023"
+    "id": "c3d6ba60-baa5-41b7-afce-b4534dfc9bac",
+    "title": "The Lord of the Rings",
+    "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze away from Minas Tirith, as Frodo and Sam journey deep into Mordor to destroy the One Ring.",
+    "year": 2003,
+    "genre": "Fantasy, Adventure",
+    "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg"
   },
   {
+    "id": "3eab996c-6b62-4730-898a-a3936aed98d0",
+    "title": "Pulp Fiction",
+    "description": "The lives of two mob hit men, a boxer, and a gangster's wife intertwine in a series of violent events across Los Angeles.",
+    "year": 1994,
+    "genre": "Crime, Comedy",
+    "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg"
+  },
+  {
+    "id": "23714110-ef15-44dc-9c23-76231606e318",
+    "title": "Schindler's List",
+    "description": "The true story of Oskar Schindler, a German businessman who saved the lives of over a thousand Jews during the Holocaust.",
+    "year": 1993,
+    "genre": "Historical, Drama",
     "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg",
-    "id": "2b97da2b-54d0-4ae4-9ddb-0d685965e5ff",
-    "Title": "Forrest Gump",
-    "Description": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.",
-    "Genre": "Drama, Romance",
-    "ReleaseYear": "2023"
+    "watched": true,
+    "rating": "3"
+  },
+  {
+    "id": "709baf64-a19e-467f-b137-ee666899bc2d",
+    "title": "Spirited Away",
+    "description": "A young girl, Chihiro Ogino, finds herself in a strange and fantastical world of spirits. She must journey through this world to find her missing parents and escape to the human world.",
+    "year": 2001,
+    "genre": "Animation, Fantasy",
+    "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg",
+    "watched": true,
+    "rating": "4"
+  },
+  {
+    "id": "45ebc433-8770-4d9c-8e2f-ef47b2eac1fb",
+    "title": "Good Will Hunting",
+    "description": "Will Hunting, a young janitor at MIT, has a gift for mathematics but needs help from a therapist to find direction in his life.",
+    "year": 1997,
+    "genre": "Drama, Romance",
+    "img": "C:\\Users\\k.lalitha sairam\\movieapplication\\Backend\\assets\\image1.jpeg"
   }
 ]
